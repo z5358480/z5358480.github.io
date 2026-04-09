@@ -1,1 +1,3 @@
-# z5358480.github.io
+layout: page
+title: "XSS"
+permalink: /xss.html
